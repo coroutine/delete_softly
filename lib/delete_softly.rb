@@ -7,7 +7,6 @@
 # to get a feel of what is being done. This gem works through many relations
 
 require 'active_record'
-require 'meta_where'
 require 'class_methods'
 require 'instance_methods'
 module DeleteSoftly

@@ -13,7 +13,6 @@ Gem::Specification.new do |s|
   s.description = %q{This gem adds soft delete functionality to your ActiveRecord models.}
   
   s.add_dependency "rails", ">= 3.0.0"
-  s.add_dependency "metawhere", ">= 0"
   
   s.add_development_dependency "rspec", ">= 2.0.0"
   
