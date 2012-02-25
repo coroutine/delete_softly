@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "delete_softly/version"
+require "version"
 
 Gem::Specification.new do |s|
   s.name        = "delete_softly"
