@@ -72,12 +72,13 @@ end
 ActiveRecord::Base.send(:extend, DeleteSoftly::ARExtender)
 
 # Overwrite ActiveRecord::Base#default_scope
-class ActiveRecord::Base
-  # default_scope fix discussed in ticket:
-  # https://rails.lighthouseapp.com/projects/8994/tickets/4583-merge-default-scopes-by-default#ticket-4583-11
-  def self.default_scope(options = {})
-    key = :"#{self}_scoped_methods"
-    Thread.current[key] = nil
-    self.default_scoping << construct_finder_arel(options, default_scoping.pop)    
-  end
-end
+#Override is not needed any more for the rails 3.2.
+#class ActiveRecord::Base
+#  # default_scope fix discussed in ticket:
+#  # https://rails.lighthouseapp.com/projects/8994/tickets/4583-merge-default-scopes-by-default#ticket-4583-11
+#  def self.default_scope(options = {})
+#    key = :"#{self}_scoped_methods"
+#    Thread.current[key] = nil
+#    self.default_scoping << construct_finder_arel(options, default_scoping.pop)
+#  end
+#end
