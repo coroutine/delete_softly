@@ -2,3 +2,4 @@ pkg
 doc
 test/db.sqlite3
 *.gem
+\.idea
