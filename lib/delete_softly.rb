@@ -47,8 +47,8 @@ module DeleteSoftly
     #  class Post < ActiveRecord::Base
     #    delete_softly :enforce => false
     #  end
-    # An object will still be available after destroy is called, 
-    def delete_softly(options = {:enforce => :active})
+    # An object will still be available after destroy is called.
+    def delete_softly(options = {:enforce => :without_deleted})
       # Make destroy! the old destroy
       alias_method :destroy!, :destroy
 
